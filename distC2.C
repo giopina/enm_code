@@ -1,11 +1,12 @@
-/* written by Giovanni Pinamonti, October 2014 */
+/* Program written by Giovanni Pinamonti
+  PhD student at 
+  Scuola Internazionale Superiori di Studi Avanzati, Trieste, Italy
+  October 2014 */
+
 //============================================================================
 // originally based on
 // Name        : generateConfigs.cpp
 // Author      : Guido Polles
-// Version     :
-// Copyright   : 
-// Description : 
 //============================================================================
 
 #include <iostream>
