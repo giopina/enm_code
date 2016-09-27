@@ -1,6 +1,6 @@
 LAPACK=-I${MKL_HOME}/include/ -L${MKL_LIB} -liomp5 -lmkl_intel_lp64 -lpthread  -Wl,--start-group  -lmkl_intel_thread -lmkl_sequential -lmkl_core -Wl,--end-group -lm -L${MKLPATH} ${MKLPATH}/libmkl_solver_lp64.a
 
-all: ribogm pca compdist genconf distC2 ang_C1p_P enm_new countn fast_rwsip fast_bhatt fit entrcomp
+all: ribogm pca genconf distC2 ang_C1p_P enm_new countn fast_rwsip fast_bhatt fit entrcomp
 
 #program to do the Elastic Network Model with different beads, different cutoffs, different models
 ribogm: RiboGM.o Matrix.o Structure3d.o ElasticNet.o CovMatrix1d.o
@@ -15,10 +15,10 @@ pca.o: pca.C
 	g++ -O3 -c pca.C
 
 #compute the fluctuations of the distances in a trajectory (generated from genconf) (probably obsolete)
-compdist: compdist.o Structure3d.o
-	g++ -O3 compdist.o Structure3d.o -o compdist.x
-compdist.o: compdist.C
-	g++ -O3 -c compdist.C
+#compdist: compdist.o Structure3d.o
+#	g++ -O3 compdist.o Structure3d.o -o compdist.x
+#compdist.o: compdist.C
+#	g++ -O3 -c compdist.C
 
 #generate gaussian trajectories from one ENM
 genconf: genConf.o Structure3d.o Matrix.o PrincipalComp.o CovMatrix1d.o
@@ -94,4 +94,4 @@ NormalModes.o: NormalModes.cpp
 	g++ -O3 -c NormalModes.cpp
 
 clean: 
-	rm -rf fit.o ElasticNet.o Structure3d.o Matrix.o CovMatrix1d.o PrincipalComp.o generateConfigs.o dist.o RiboGM.o EntrComp.o pca.o distC2.o Entrcomp.o fast_rwsip.o fast_bhatt.o enm_new.o countn.o compdist.o genConf.o ang_C1p_P.o
+	rm -rf fit.o ElasticNet.o Structure3d.o Matrix.o CovMatrix1d.o PrincipalComp.o generateConfigs.o dist.o RiboGM.o EntrComp.o pca.o distC2.o Entrcomp.o fast_rwsip.o fast_bhatt.o enm_new.o countn.o genConf.o ang_C1p_P.o
