@@ -13,7 +13,7 @@ but be careful, it needs LAPACK libraries (and you have to set the path in the M
 ### Authors ###
 I'm the main author but I recycled some code from
 
-#### Cristian Micheletti ####
+##### Cristian Micheletti #####
 io
 my_malloc
 ElasticNet
