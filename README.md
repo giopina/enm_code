@@ -1,26 +1,35 @@
 # README #
 
-### What is this repository for? ###
+### ENM calculations on RNA molecules (also supports proteins) ###
 
-ENM calculations on RNA molecules (also supports proteins)
-_____________________________________________________________
 
 ### How do I get set up? ###
+to install:
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+make all
 
-### Contribution guidelines ###
+but be careful, it needs LAPACK libraries (and you have to set the path in the Makefile)
 
-* Writing tests
-* Code review
-* Other guidelines
+### Authors ###
+I'm the main author but I recycled some code from
 
-### Who do I talk to? ###
+#### Cristian Micheletti ####
+io
+my_malloc
+ElasticNet
+myjacobi
+vectop
+common
+kabsch
+lapack_matrix_routines_wrapper_v3
 
-* Repo owner or admin
-* Other community or team contact
+##### Guido Polles ######
+Vector3d
+Bead
+NormalModes
+Structure3d
+genConf
+
+##### The Internet #####
+qcprot
+quaternion
